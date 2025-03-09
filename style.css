@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    background-color: #ffafcc;
+    display: flex;
+    justify-content: center;  /* Centraliza a .container horizontalmente */
+    align-items: flex-start;  /* Alinha a .container ao topo da tela */
+    height: 100vh;  /* Garante que o body ocupe a altura total da tela */
+}
+
+.container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;  /* Alinha a .content horizontalmente dentro da .container */
+    width: 60%;
+    transition: all 1s ease-in-out 500ms;
+}
+
+.content {
+    width: 80%;  /* Largura da .content relativa à .container */
+    max-width: 500px;  /* Limita a largura máxima */
+    padding-inline: 20px;
+    background-color: #ffc8dd;
+    border-radius: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-bottom: 5%;
+    margin-bottom: 40px;
+}
+
+#tilteText{
+    color: #ffffff;
+}
+
+input {
+    border: none;
+    padding: 15px 50px;
+    border-radius: 16px;
+}
+
+#addNewItem {
+    border: none;
+    padding: 15px;
+    border-radius: 16px;
+    color: #0d1b2a;
+    font-weight: bolder;
+    background-color: #ffffff;
+}
+
+.header {
+    text-align: center;
+}
+
+.itemsContent {
+    text-align: left;
+}
+
+.itemsContent ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.itemsContent li {
+    width: auto;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: white;
+    border: none;
+    border-radius: 24px;
+    align-items: center;
+    display: flex;
+}
+
+.itemsContent a {
+    transition: all 0.1s ease;
+    margin-left: 10px;
+    float: left;
+    word-break: break-all;
+}
+
+.itemsContent button {
+    border: none;
+    padding: 10px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.itemsContent #delete{
+    width: 40px;
+    margin-left: auto;
+    /*background-color: rgb(255, 154, 154);*/
+    text-align: right;
+}
+
+.itemsContent #check{
+    width: 40px;
+    /*background-color:  rgb(162, 255, 154);*/
+    float: left;
+}
+
+.itemsContent #copy{
+    width: 40px;
+    /*background-color:  rgb(162, 255, 154);*/
+    float: left;
+}
+
+.marked{
+    color: #a3a3a3;
+    text-decoration: line-through;
+}
+
+footer {
+    color: white;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#copy-message {
+    position: fixed;
+    top: 60px;
+    width: 30%;
+    transform: translateX(-50%); /* Centraliza a div horizontalmente */
+    background-color: white;
+    color: #ffafcc;
+    padding: 10px 20px;
+    border-radius: 24px;
+    z-index: 9999;
+    justify-content: center;
+}
+
+.message-content {
+    display: inline-flex; /* Usar inline-flex para permitir flexbox dentro do elemento */
+    align-items: center;  /* Alinha a imagem e o texto verticalmente */
+}
+
+.message-content img {
+    width: 40px; /* Definindo tamanho da imagem */
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.message-content h1{
+    font-size: 20px;
+    word-break: break-all;
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 90%;
+    }
+
+    .content {
+        width: 100%; 
+        padding-bottom: 10%;
+    }
+
+    #copy-message {
+        width: 80%;
+    }
+
+    input {
+        padding: 15px 100px;
+    }
+
+    #addNewItem {
+        margin-top: 20px;
+        border: none;
+        padding: 15px;
+        border-radius: 16px;
+        background-color: #ffffff;
+    }
+
+    .itemsContent #delete{
+        width: 30px;
+    }
+    
+    .itemsContent #check{
+        width: 30px;
+    }
+    
+    .itemsContent #copy{
+        width: 30px;
+    }
+    
+}
+
+
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+    }
+
+    .content {
+        width: 100%; 
+        padding-bottom: 10%;
+    }
+
+    #copy-message {
+        width: 80%;
+    }
+
+    input {
+        padding: 15px 20%;
+    }
+
+    #addNewItem {
+        margin-top: 20px;
+        border: none;
+        padding: 15px 25%;
+        border-radius: 16px;
+        background-color: #ffffff;
+        text-align: center;
+        text-wrap: none;
+        white-space: nowrap;
+    }
+
+    .itemsContent #delete{
+        width: 30px;
+    }
+    
+    .itemsContent #check{
+        width: 30px;
+    }
+    
+    .itemsContent #copy{
+        width: 30px;
+    }
+    
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>To Do List</title>
+</head>
+<body>
+    <audio id="startSound" src="SFXs/start-list.mp3"></audio>
+    <audio id="copyItemSound" src="SFXs/pop-copy.mp3"></audio>
+    <audio id="checkItemSound" src="SFXs/pop-check-2.mp3"></audio>
+    <audio id="createItemSound" src="SFXs/pop-create.mp3"></audio>
+    <audio id="deleteItemSound" src="SFXs/pop-delete.mp3"></audio>
+    <div class="container animate__animated animate__jello">
+        <div class="content">
+            <div class="header">
+                <h1 id="tilteText">Listinha da Kami</h1>
+                <input id="newItem" type="text" placeholder="Nova tarefinha.." maxlength="1900">
+                <button type="submit" id="addNewItem">Adicionar a listinha</button>
+            </div>
+            <div class="itemsContent">
+                <ul id="items">
+    
+                </ul>
+            </div>
+
+            <footer>Develop by @Vinicius for @Kami</footer>
+        </div>
+    </div>
+
+    <div id="copy-message" class="hidden animate__animated">
+        <div class="message-content">
+            <img src='IMGs/copy.png' draggable="false" id="copy">
+            <h1>Menssagem copiadaa</h1>
+        </div>
+    </div>
+
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
